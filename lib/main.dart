@@ -13,20 +13,20 @@ class MyApp extends StatelessWidget {
           title: Text('現在の日時を表示'),
         ),
         body: Center(
-          child: DateTimeDisplayWithoutToString(),
+          child: DateTimeDisplay(),
         ),
       ),
     );
   }
 }
 
-class DateTimeDisplayWithoutToString extends StatelessWidget {
+class DateTimeDisplay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     DateTime now = DateTime.now(); // 現在の日時を取得
-
+    String day = now.toString();
     return Text(
-      now, // 現在の日時を表示
+      day,
       style: TextStyle(fontSize: 24),
     );
   }
